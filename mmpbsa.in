@@ -1,0 +1,10 @@
+Input file for MM-GBSA calculation
+&general
+  startframe=1,
+  endframe=99999,
+  interval=1,
+/
+&gb
+  igb=5,
+  saltcon=0.150,
+/
