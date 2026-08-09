@@ -17,6 +17,8 @@ dependencies:
   - matplotlib-base=3.10.8
   - seaborn=0.13.2
   - mpi4py=4.1.2
+  - rdkit        # 리간드 3D 좌표 및 SMILES 화학 정보 매핑용 추가
+  - openbabel    # SDF/PDB 포맷 변환 및 수소 추가용 추가
   - pip
   - pip:
       - amberutils==21.0
