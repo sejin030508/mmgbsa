@@ -91,7 +91,7 @@ tleap -f tleap.in > tleap.log 2>&1
 
 # 3. OpenMM 시뮬레이션
 echo "[$PDB_ID] 3/4 OpenMM 시뮬레이션 실행 중..."
-python $SCRIPT_DIR/run_md.py $(pwd) > openmm.log 2>&1
+python $SCRIPT_DIR/run_md_refined.py $(pwd) > openmm.log 2>&1
 
 # 4. MM/GBSA 에너지 계산
 echo "[$PDB_ID] 4/4 단백질-단백질 MMPBSA 결합 에너지 계산 중..."
