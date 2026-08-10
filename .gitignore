@@ -18,6 +18,12 @@ venv/
 
 # Data / checkpoints
 data/
+# BioKinema contains Python source packages named "data". They must be shipped;
+# only generated/runtime data directories should remain ignored.
+!BioKinema/protenix/data/
+!BioKinema/protenix/data/**
+!BioKinema/protenix/openfold_local/data/
+!BioKinema/protenix/openfold_local/data/**
 datasets/
 *.pt
 *.pth
