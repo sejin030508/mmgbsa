@@ -1,0 +1,26 @@
+Found 20 systems
+  [1/20] cath2_1a1wA00: KL=0.075 tau_md=609ns tau_bk=623ns  n_mfpt=90
+  [2/20] cath2_1a3aA00: KL=0.236 tau_md=540ns tau_bk=621ns  n_mfpt=72
+  [3/20] cath2_1a5tA01: KL=0.157 tau_md=561ns tau_bk=608ns  n_mfpt=72
+  [4/20] cath2_1a8yA02: KL=0.713 tau_md=551ns tau_bk=373ns  n_mfpt=90
+  [5/20] cath2_1a9xA01: KL=0.179 tau_md=550ns tau_bk=624ns  n_mfpt=90
+  [6/20] cath2_1a9xA03: KL=0.199 tau_md=567ns tau_bk=603ns  n_mfpt=90
+  [7/20] cath2_1adjA02: KL=1.153 tau_md=531ns tau_bk=7ns  n_mfpt=72
+  [8/20] cath2_1amuB02: KL=0.165 tau_md=596ns tau_bk=618ns  n_mfpt=72
+  [9/20] cath2_1bagA02: KL=0.223 tau_md=578ns tau_bk=628ns  n_mfpt=90
+  [10/20] cath2_1bobA03: KL=0.080 tau_md=580ns tau_bk=632ns  n_mfpt=56
+  [11/20] cath2_1bysA00: KL=0.110 tau_md=596ns tau_bk=592ns  n_mfpt=90
+  [12/20] cath2_1c3jA02: KL=0.139 tau_md=527ns tau_bk=567ns  n_mfpt=72
+  [13/20] cath2_1ciiA03: KL=0.103 tau_md=469ns tau_bk=624ns  n_mfpt=90
+  [14/20] cath2_1cr5A01: KL=0.090 tau_md=411ns tau_bk=562ns  n_mfpt=90
+  [15/20] cath2_1cywA00: KL=0.101 tau_md=321ns tau_bk=9ns  n_mfpt=90
+  [16/20] cath2_1d2nA02: KL=0.128 tau_md=599ns tau_bk=623ns  n_mfpt=90
+  [17/20] cath2_1d3uB01: KL=0.151 tau_md=545ns tau_bk=536ns  n_mfpt=90
+  [18/20] cath2_1d5yA01: KL=0.344 tau_md=540ns tau_bk=626ns  n_mfpt=32
+  [19/20] cath2_1d6uA01: KL=0.214 tau_md=489ns tau_bk=604ns  n_mfpt=72
+  [20/20] cath2_1dgnA00: KL=0.122 tau_md=621ns tau_bk=530ns  n_mfpt=56
+
+Saved cache: /cto_studio/xtalpi_lab/fengbin/Protenix_v0.2.0/BioKinema/experiments/kinetics_thermo/example_results/data_cache.pkl  (4.8 MB)
+Total systems: 20
+Mean KL: 0.234
+Mean MFPT log10 MAE: 0.967

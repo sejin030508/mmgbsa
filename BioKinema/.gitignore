@@ -1,0 +1,69 @@
+# Byte-compiled / optimized
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.o
+.ipynb_checkpoints/
+
+# Packaging
+build/
+dist/
+*.egg-info/
+*.egg
+.eggs/
+
+# Editors / OS
+.vscode/
+.idea/
+.DS_Store
+
+# Experiment outputs / logs
+output/
+output_*/
+wandb/
+logs/
+*.log
+runs/
+
+# Large data & artifacts (regenerated via scripts/ or hosted externally).
+# Dir patterns are anchored to the repo root (leading /) so they do NOT match the
+# experiments/*/data inputs that ship with the reproduce scripts.
+/data/
+/release_data/
+/checkpoints/
+/msa/
+/msa_cache/
+/MSM_CACHES/
+*.pt
+*.ckpt
+*.npz
+*.xtc
+*.dcd
+*.tar
+*.tar.gz
+*.pkl.gz
+
+# Codec output dirs / packaged bundles (regenerate with scripts/codec or download)
+*_codec/
+biokinema_release_data/
+*_codec_bundle*
+
+# Reproduce-input structure folders ship as packaged archives (extract before running);
+# ignore the unpacked folders but DO commit the .tar.gz archives.
+experiments/kinetics_thermo/data/init_pdbs/
+experiments/protein_ligand_dynamics/data/init_structures/
+experiments/atlas_benchmark/init_frames/
+!experiments/kinetics_thermo/data/init_pdbs.tar.gz
+!experiments/protein_ligand_dynamics/data/init_structures.tar.gz
+!experiments/atlas_benchmark/init_frames.tar.gz
+
+# Local env
+.env
+
+# Build/JIT artifacts & backups
+*.ninja
+*.bak
+
+# NFS tempfiles
+.nfs*

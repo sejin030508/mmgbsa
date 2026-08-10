@@ -1,0 +1,2 @@
+wrote /cto_studio/xtalpi_lab/fengbin/Protenix_v0.2.0/BioKinema/experiments/kinetics_thermo/example_results/per_system_table.csv  (20 systems)
+MEAN: rho_P=0.768  rho_S=0.789  KL=0.234  pi_MAE=0.041  W2=0.225

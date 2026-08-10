@@ -1,0 +1,26 @@
+# Reference metrics — checkpoint: BioKinema_atlas+misato+mdposit_msm_nopretrain_sqrt_20260610_105347 / 5999_ema_0.999.pt
+# Generation: exp1 (MD frame-0 init + MSA), coarse_interval=1, coarse_frame_num=101, W_H=1, W_G=100,
+#             N_sample=1, N_step=20, N_cycle=10, lambda=1.75, eta=1.5, beta=0.5, history_t=4e-4, seed=101.
+# 81 Atlas targets x 3 replicas; headline: RMWD 2.25 / PC-sim 45.7% / Pairwise-RMSD r 0.80.
+
+path                     output_atlas_bench/atlas_misato_mdposit_5999ema_oldset_exp1_msa/out.pkl
+count                                                                81.00                      
+MD pairwise RMSD                                                      2.84                      
+Pairwise RMSD                                                         2.85                      
+Pairwise RMSD r                                                       0.80                      
+MD RMSF                                                               1.70                      
+RMSF                                                                  1.49                      
+Global RMSF r                                                         0.82                      
+Per target RMSF r                                                     0.90                      
+RMWD                                                                  2.25                      
+RMWD trans                                                            1.91                      
+RMWD var                                                              1.02                      
+MD PCA W2                                                             1.33                      
+Joint PCA W2                                                          1.82                      
+PC sim > 0.5 %                                                       45.68                      
+Weak contacts J                                                       0.59                      
+Weak contacts nans                                                    0.00                      
+Transient contacts J                                                  0.41                      
+Transient contacts nans                                               0.00                      
+Exposed residue J                                                     0.62                      
+Exposed MI matrix rho                                                 0.32                      

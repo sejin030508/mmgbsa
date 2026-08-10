@@ -1,0 +1,2 @@
+wrote /cto_studio/xtalpi_lab/fengbin/Protenix_v0.2.0/BioKinema/experiments/kinetics_thermo/example_results/mfpt_jointplot.pdf
+wrote /cto_studio/xtalpi_lab/fengbin/Protenix_v0.2.0/BioKinema/experiments/kinetics_thermo/example_results/mfpt_jointplot.png
