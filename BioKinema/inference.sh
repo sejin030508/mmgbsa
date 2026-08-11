@@ -13,33 +13,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-export CUTLASS_PATH=/path/to/cutlass
-export CUDA_HOME=/path/to/cuda
+# export CUTLASS_PATH=/path/to/cutlass  # Comment these out
+# export CUDA_HOME=/path/to/cuda
 export PYTHONPATH=$PYTHONPATH:$(pwd)
-export LAYERNORM_TYPE=fast_layernorm
-export USE_DEEPSPEED_EVO_ATTTENTION=true
+export LAYERNORM_TYPE=pytorch           # Use standard pytorch layernorm
+export USE_DEEPSPEED_EVO_ATTTENTION=false # Disable custom deepspeed kernels
 
 N_step=20
 N_cycle=10
 seed=101
-use_deepspeed_evo_attention=true
+use_deepspeed_evo_attention=false
 lambda=1.75
 eta=1.5
 test_set=inference
-# beta: ALiBi power exponent matching the checkpoint. MUST match the model:
-#   0.5  -> "sqrt" checkpoint (complexes + short-time MD)   [default]
-#   0.25 -> "beta" checkpoint (long single-chain MD)
-beta=0.5
 
 # ================== default =====================
 # N_sample (int): Number of generated samples
 N_sample=1
 # coarse_frame_num (int): Number of coarse frames including x_0.
 coarse_frame_num=50
-# coarse_interval (float): Temporal spacing between coarse frames, unit = ns.
+# coarse_interval (float): Temporal spacing between coarse frames.
 coarse_interval=2
 # fine_frame_num (int): Number of sub-intervals per coarse interval. fine_frame_num=1 means no interpolation
-fine_frame_num=1
+fine_frame_num=5
 # W_H (int): History window size  (coarse forecasting).
 W_H=1
 # W_G (int): Generation window size (coarse forecasting).
@@ -59,7 +55,6 @@ python3 runner/inference.py \
     --dump_dir ${dump_dir} \
     --model.N_cycle ${N_cycle} \
     --model.diffusion_module.causal_mask false \
-    --model.diffusion_module.beta ${beta} \
     --data.train_sets ${test_set} \
     --data.test_sets ${test_set} \
     --sample_diffusion.N_sample ${N_sample} \

@@ -23,17 +23,28 @@ mkdir -p "$P1_OUT"
     "$P1_OUT"
 
 # ---------------------------------------------------------
-# [2] Phase 2 (LBD / SRC1) Apo 실행
+# [2] Phase 2 (LBD / SRC1) - Model 1 Apo 실행 (AF2-MG-001 계열용)
 # ---------------------------------------------------------
-# (주의: Phase 2 파일명은 잠시 후 확인해서 정확히 맞출 예정입니다. 일단 주석 처리!)
-# echo "▶ Phase 2 Apo 시뮬레이션 시작..."
-# P2_OUT="$BASE_OUT_DIR/phase2_apo_wt"
-# mkdir -p "$P2_OUT"
-#
-# "$SCRIPT_DIR/run_mmgbsa_protein_single.sh" \
-#     "$DATA_DIR/phase2_af2_src1/components/[ChainA_이름].pdb" \
-#     "$DATA_DIR/phase2_af2_src1/components/[ChainB_이름].pdb" \
-#     "$P2_OUT"
+echo "▶ Phase 2 (Model 1) Apo 시뮬레이션 시작..."
+P2_M1_OUT="$BASE_OUT_DIR/phase2_apo_wt_m1"
+mkdir -p "$P2_M1_OUT"
+
+"$SCRIPT_DIR/run_mmgbsa_protein_single.sh" \
+    "$DATA_DIR/phase2_af2_src1/components/apo_1ovl__src1_1__unguided__m3_chainA.pdb" \
+    "$DATA_DIR/phase2_af2_src1/components/apo_1ovl__src1_1__unguided__m3_chainB.pdb" \
+    "$P2_M1_OUT"
+
+# ---------------------------------------------------------
+# [3] Phase 2 (LBD / SRC1) - Model 2 Apo 실행 (AF2-MG-002 계열용)
+# ---------------------------------------------------------
+echo "▶ Phase 2 (Model 2) Apo 시뮬레이션 시작..."
+P2_M2_OUT="$BASE_OUT_DIR/phase2_apo_wt_m2"
+mkdir -p "$P2_M2_OUT"
+
+"$SCRIPT_DIR/run_mmgbsa_protein_single.sh" \
+    "$DATA_DIR/phase2_af2_src1/components/apo_1ovl__src1_2__unguided__m0_chainA.pdb" \
+    "$DATA_DIR/phase2_af2_src1/components/apo_1ovl__src1_2__unguided__m0_chainB.pdb" \
+    "$P2_M2_OUT"
 
 echo "=========================================================="
 echo "🎉 모든 Apo 기준점(Baseline) 파이프라인 배치가 종료되었습니다!"
