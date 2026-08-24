@@ -109,8 +109,8 @@ ln -sf ../lig.frcmod .
 
 cat <<EOF > tleap_dir1.in
 source leaprc.protein.ff14SB
+source leaprc.phosaa14SB
 source leaprc.water.tip3p
-source leaprc.phosaa10
 source leaprc.gaff2
 
 protA = loadpdb protA_noh.pdb

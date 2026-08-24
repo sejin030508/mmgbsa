@@ -74,8 +74,8 @@ pdb4amber -i protB_raw.pdb -o ligand_noh.pdb --nohyd > pdb4amber_lig.log 2>&1
 echo "[2/4] Tleap 위상 파일 및 물 상자 생성 중..."
 cat <<EOF > tleap.in
 source leaprc.protein.ff14SB
+source leaprc.phosaa14SB
 source leaprc.water.tip3p
-source leaprc.phosaa10
 
 rec = loadpdb receptor_noh.pdb
 lig = loadpdb ligand_noh.pdb
