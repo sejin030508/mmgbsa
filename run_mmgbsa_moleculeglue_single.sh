@@ -85,14 +85,11 @@ obabel -isdf ligand_original.sdf -osdf -O ligand_h.sdf -h > obabel.log 2>&1
 
 echo "[3/5] 리간드 전하 계산 및 파라미터화 중..."
 echo "  -> 1차 시도: AM1-BCC (구조 최적화 생략)"
-if antechamber -i ligand_h.sdf -fi sdf -o lig_bcc.mol2 -fo mol2 -c bcc -s 2 -ek "maxcyc=0" > antechamber.log 2>&1; then
-    echo "  ✅ AM1-BCC 계산 성공!"
-else
-    echo "  ⚠️ AM1-BCC 계산 실패 (로그: antechamber.log 참조)"
-    echo "  -> 2차 시도: Gasteiger 방식으로 자동 우회(Fallback) 합니다..."
-    antechamber -i ligand_h.sdf -fi sdf -o lig_bcc.mol2 -fo mol2 -c gas -s 2 > antechamber_gas.log 2>&1
-    echo "  ✅ Gasteiger 계산 성공!"
-fi
+antechamber \
+    -i ligand_h.sdf -fi sdf \
+    -o lig_bcc.mol2 -fo mol2 \
+    -c bcc -s 2 -ek "maxcyc=0" \
+    > antechamber.log 2>&1
 parmchk2 -i lig_bcc.mol2 -f mol2 -o lig.frcmod > parmchk2.log 2>&1
 
 # ========================================================
@@ -130,8 +127,6 @@ saveamberparm lig ligand.prmtop ligand.inpcrd
 solvatebox comp TIP3PBOX 10.0
 addions comp Na+ 0
 addions comp Cl- 0
-addions comp Na+ 40
-addions comp Cl- 40
 
 saveamberparm comp complex_solv.prmtop complex_solv.inpcrd
 quit

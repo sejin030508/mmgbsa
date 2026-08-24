@@ -6,5 +6,5 @@ Input file for MM-GBSA calculation
 /
 &gb
   igb=5,
-  saltcon=0.150,
+  saltcon=0.0,
 /

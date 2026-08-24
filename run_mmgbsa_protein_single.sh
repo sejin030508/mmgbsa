@@ -88,8 +88,6 @@ saveamberparm lig ligand.prmtop ligand.inpcrd
 solvatebox comp TIP3PBOX 10.0
 addions comp Na+ 0
 addions comp Cl- 0
-addions comp Na+ 40
-addions comp Cl- 40
 
 saveamberparm comp complex_solv.prmtop complex_solv.inpcrd
 quit
