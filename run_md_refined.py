@@ -6,8 +6,8 @@ from openmm.unit import *
 from sys import stdout
 
 ## PARAMETER
-save_interval = 25000 # 50 ps (25,000 steps) 마다 정보 및 궤적 저장 (총 2000 프레임)[cite: 1]
-production_steps = 50000000 # 100 ns (2 fs * 50,000,000)[cite: 1]
+save_interval = 12500 # 50 ps (25,000 steps) 마다 정보 및 궤적 저장 (총 2000 프레임)[cite: 1]
+production_steps = 25000000 # 100 ns (2 fs * 50,000,000)[cite: 1]
 
 # ========================================================
 # 1. 초기 설정 및 파일 로드
